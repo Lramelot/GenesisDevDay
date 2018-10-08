@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResetList", "ResetList\Rese
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathMultiplication", "MathMultiplication\MathMultiplication.csproj", "{C4B0472E-69D3-4842-8573-E40C599FAA88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foreach", "Foreach\Foreach.csproj", "{3BC3A1EA-15BC-45FE-A66A-452203C76911}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C4B0472E-69D3-4842-8573-E40C599FAA88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4B0472E-69D3-4842-8573-E40C599FAA88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4B0472E-69D3-4842-8573-E40C599FAA88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC3A1EA-15BC-45FE-A66A-452203C76911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC3A1EA-15BC-45FE-A66A-452203C76911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC3A1EA-15BC-45FE-A66A-452203C76911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC3A1EA-15BC-45FE-A66A-452203C76911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
