@@ -14,16 +14,16 @@ namespace ResetList
             var random = new Random();
             var deck = new List<Card>();
 
-            for (var i = 0; i < turnToPlay; i++)
+            for (var currentTurn = 0; currentTurn < turnToPlay; currentTurn++)
             {
                 PopulateDeck(deck);
 
                 var playerHand = new List<Card>();
                 var emptyList = new List<Card>();
 
-                for (var j = 0; j < playerNumber; j++)
+                for (var currentPlayertoPlay = 0; currentPlayertoPlay < playerNumber; currentPlayertoPlay++)
                 {
-                    for (var k = 0; k < numberCardToDraw; k++)
+                    for (var cardsInHand = 0; cardsInHand < numberCardToDraw; cardsInHand++)
                     {
                         var deckSize = deck.Count;
                         var cardNumberToDraw = random.Next(0, deckSize);
@@ -33,11 +33,15 @@ namespace ResetList
                         deck.Remove(cardToDraw);
                     }
 
-                    DisplayDeck(j, playerHand); // Affiche la main du joueur
+                    DisplayDeck(currentPlayertoPlay, playerHand); // Affiche la main du joueur
                     playerHand = emptyList; // Vide la main du joueur
                 }
 
-                Console.WriteLine("Passer au deuxième lancer ?");
+                if (currentTurn == 0)
+                {
+                    Console.WriteLine("Passer au deuxième lancer ?");
+                }
+
                 Console.ReadKey();
             }
         }
