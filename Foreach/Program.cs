@@ -24,14 +24,14 @@ namespace Foreach
                 new Product { Id = 4, Name = "Ciment" }
             };
 
-            Console.WriteLine("==== Produits avant calcul TVA ====");
+            Console.WriteLine("==== Produits avant remplissage catalogue ====");
             DisplayProducts(products);
 
             // Recherche des informations dans le catalogue
-            products.ForEach(product => product = productsCatalog.Single(p => p.Id == product.Id);
+            products.ForEach(product => product = productsCatalog.Single(p => p.Id == product.Id));
             
             Console.WriteLine();
-            Console.WriteLine("==== Produits après calcul TVA ====");
+            Console.WriteLine("==== Produits après remplissage catalogue ====");
             DisplayProducts(products);
 
             Console.ReadKey();
