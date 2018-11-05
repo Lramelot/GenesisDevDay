@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,6 +6,13 @@ namespace Foreach
 {
     class Program
     {
+        /// <summary>
+        /// On souhaite récupéerer les différentes informations des produits du panier (cart)
+        /// à partir de la collection du catalogue (productsCatalog).
+        ///
+        /// Cependant, la collection que l'on récupère semble identique. Pourquoi,
+        /// comment régler ce problème ?
+        /// </summary>
         static void Main(string[] args)
         {
             var products = new List<Product>
@@ -13,7 +20,6 @@ namespace Foreach
                 new Product { Id = 1, Name = "Indéfini" },
                 new Product { Id = 2, Name = "Indéfini" },
                 new Product { Id = 3, Name = "Indéfini" },
-                new Product { Id = 4, Name = "Indéfini" }
             };
 
             var productsCatalog = new List<Product>
@@ -27,6 +33,9 @@ namespace Foreach
             Console.WriteLine("==== Produits avant remplissage catalogue ====");
             DisplayProducts(products);
 
+            // Attention que l'on souhaite conserver cette logique de remplacement
+            // dans le foreach.
+
             // Recherche des informations dans le catalogue
             products.ForEach(product => product = productsCatalog.Single(p => p.Id == product.Id));
             
@@ -37,11 +46,12 @@ namespace Foreach
             Console.ReadKey();
         }
 
+        // /!\ Ne rien changer en dessous de ce commentaire
         public static void DisplayProducts(IEnumerable<Product> products)
         {
             foreach (var product in products)
             {
-                Console.WriteLine($"L'identifiant ${product.Id} a pour nom {product.Name}");
+                Console.WriteLine($"L'identifiant {product.Id} a pour nom {product.Name}");
             }
         }
 

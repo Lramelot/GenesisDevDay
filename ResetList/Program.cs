@@ -3,6 +3,18 @@ using System.Collections.Generic;
 
 namespace ResetList
 {
+    /// <summary>
+    /// Soit un jeu de 20 cartes (10, V, D, R, As).
+    /// On distribue 4 cartes à 4 joueurs différents.
+    ///
+    /// Premier problème : Chaque joueur ne reçoit pas 4 cartes, pourquoi ?
+    ///
+    /// On recommence ensuite à distribuer les cartes
+    ///
+    /// Deuxième problème : Il y a des doublons lors de la deuxième distribution
+    ///
+    /// Comment régler ces deux problèmes, pourquoi surviennent-ils ?
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
